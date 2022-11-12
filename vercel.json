@@ -1,32 +1,17 @@
 {
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Contro-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "content-type"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "DELETE, PUT, POST, GET, OPTIONS"
-        }
-      ]
+      "handle": "filesystem"
+    },
+    {
+      "src": "./(.*)",
+      "status": 404,
+      "dest": "/welcome.html"
     }
   ],
-  "rewrites": [
+  "build": [
     {
-      "source": "/",
-      "destination": "/api/query-all-users"
-    }
-  ],
-  "builds": [
-    {
-      "src": "./server.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ]

@@ -47,7 +47,7 @@ mongoose
     console.log('连接数据库成功!!!');
     // 只有当连接上数据库后才去启动服务器
     app.listen('5002', () => {
-      console.log('服务器启动成功, 请访问: http://localhost:5001');
+      console.log('服务器启动成功, 请访问: http://localhost:5002');
     });
   })
   .catch((error) => {
