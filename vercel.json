@@ -9,8 +9,10 @@
       "dest": "/welcome.html"
     }
   ],
-  "build": {
-    "src": "server.js",
-    "use": "@vercel/node"
-  }
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ]
 }
